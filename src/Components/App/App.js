@@ -6,13 +6,35 @@ import '../App/App';
 // import Quiz from "../Quiz/Quiz"
 // import Results from "../Results/Results"
 // import ExternalPage from "../ExternalPage/ExternalPage"
+import { fetchQuestions, fetchLaureates } from "../../apiCalls"
+import {useState, useEffect} from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <img src={medal} className="App-logo" alt="logo" />
-    </div>
-  );
+
+const App = () => {
+
+  const [laureateData, setLaureateData] = useState([])
+  const [questionData, setQuestionData] = useState([])
+
+  useEffect(() => {
+    fetchLaureates()
+      .then(data => {
+        console.log("data", data.laureates)
+        setLaureateData(data.laureates)
+      })
+    fetchQuestions()
+      .then(data => {
+        console.log("data", data.results)
+        setQuestionData(data.results)
+      })
+  }, [])
+
+    return (
+      <div className="App">
+        Hi Jordan
+        {/* <img src={medal} className="App-logo" alt="logo" /> */}
+      </div>
+    );
+
 }
 
  export default App;
