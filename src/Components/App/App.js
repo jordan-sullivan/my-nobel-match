@@ -3,7 +3,7 @@ import medal from '../../images/medal.jpeg';
 // import {BrowserRouter} from "react-dom"
 import '../App/App';
 // import Home from "../Home/Home"
-// import Quiz from "../Quiz/Quiz"
+import Quiz from "../Quiz/Quiz"
 // import Results from "../Results/Results"
 // import ExternalPage from "../ExternalPage/ExternalPage"
 import { fetchQuestions, fetchLaureates } from "../../apiCalls"
@@ -33,6 +33,7 @@ const App = () => {
       <div className="App">
         WOW!!!!!!
         {/* <Home /> */}
+        <Quiz questionData={questionData}/>
         {/* <img src={medal} className="App-logo" alt="logo" /> */}
       </div>
     );
