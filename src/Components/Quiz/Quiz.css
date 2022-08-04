@@ -1,0 +1,24 @@
+.quizComponentDiv{
+    border: 2px solid white;
+    background-color: #371717;
+}
+
+.questionDiv{
+    border: 2px solid white;
+    background-color: #612C2B;
+}
+
+.question{
+    border: 2px solid white;
+    color: #CEA252
+}
+
+.true, .false{
+    border: 2px solid white;
+    color: #CEA252
+}
+
+.progress{
+    border: 2px solid white;
+    color:black;
+}
