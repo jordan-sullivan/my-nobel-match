@@ -16,11 +16,12 @@ const App = () => {
   const [questionData, setQuestionData] = useState([])
 
   useEffect(() => {
-    fetchLaureates()
-      .then(data => {
-        console.log("data", data.laureates)
-        setLaureateData(data.laureates)
-      })
+    // fetchLaureates()
+    //   .then(data => {
+    //     console.log("data", data.laureates)
+    //     setLaureateData(data.laureates)
+    //   })
+    
     fetchQuestions()
       .then(data => {
         console.log("data", data.results)
@@ -30,7 +31,8 @@ const App = () => {
 
     return (
       <div className="App">
-        Hi Jordan
+        WOW!!!!!!
+        {/* <Home /> */}
         {/* <img src={medal} className="App-logo" alt="logo" /> */}
       </div>
     );
