@@ -1,0 +1,24 @@
+.resultsComponentDiv{
+    border:2px solid teal;
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    color:white;
+}
+.matchDetails{
+    border:2px solid black;
+}
+.matchName, .matchCategory, .matchQuote{
+    border: 2px solid pink;
+}
+
+.studentDetails{
+    border: 2px solid black;
+}
+.correctCategories{
+    border: 2px solid pink;
+}
+.retakeButton{
+color:red;
+}
