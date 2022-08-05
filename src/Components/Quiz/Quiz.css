@@ -13,6 +13,11 @@
     color: #CEA252
 }
 
+.questionCategory{
+    border: 2px solid white;
+    color: #CEA252
+}
+
 .true,
 .false {
     border: 2px solid white;
