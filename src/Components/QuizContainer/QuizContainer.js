@@ -2,12 +2,13 @@
 import React from "react"
 import './QuizContainer.css';
 import Results from "../Results/Results"
+import Quiz from "../Quiz/Quiz"
 
 
 const QuizContainer = ({questionData}) => {
-// console.log("QuestionDATA", questionData);
+console.log("QuestionDATA", questionData);
 
-    const getReducedQs = questionData.reduce((reducedQs, q, index) => {
+    const questions = questionData.reduce((reducedQs, q, index) => {
         if ((q.category.includes("Animals")) && (!q.question.includes("&quot")) && (!q.question.includes("#"))) {
             reducedQs.push(q)
         } else if ((q.category.includes("Books")) && (!q.question.includes("&quot")) && (!q.question.includes("#"))) {
@@ -23,9 +24,11 @@ const QuizContainer = ({questionData}) => {
     return reducedQs
 }, [])
 
+console.log("25", questions)
+
 return(
-    <div className="quizComponentDiv">
-          <Game questions={getReducedQs}/>
+    <div className="containerComponentDiv">
+          <Quiz questions={questions}/>
             {/* <img className="backArrow" alt="arrow pointing left to indicate a return to the previous page" src=""/>
             <img className="forwardArrow" alt="arrow pointing right to navigate to the next page" src="" /> */}
             
@@ -33,4 +36,4 @@ return(
     )
 }
 
-export default Quiz
+export default QuizContainer

@@ -1,6 +1,4 @@
-// import { BrowserRouter } from "react-dom"
 import './Results.css';
-// import External from "../External/External"
 import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
 
