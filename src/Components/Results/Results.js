@@ -5,13 +5,13 @@ import './Results.css';
 const Results = () => {
     const [laureateData, setLaureateData] = useState([])
 
-    useEffect(()=> {
-        fetchLaureates()
-        .then(data => {
-        console.log("LaureatesData", data.laureates)
-        setLaureateData(data.laureates)
-      })
-    }, [])
+    // useEffect(()=> {
+    //     fetchLaureates()
+    //     .then(data => {
+    //     console.log("LaureatesData", data.laureates)
+    //     setLaureateData(data.laureates)
+    //   })
+    // }, [])
 
     return(
         <div className="resultsComponentDiv">
