@@ -23,6 +23,9 @@ const Quiz = ({ questions }) => {
 
 const increaseCounter = () => {
     console.log("increaseCounter working")
+    if(counter === 10) {
+
+    }
     //  Add Next Question that will act as a submit Button and adds one to functionality to it to counter.
     setCounter(counter +1)
     //now go to next page
@@ -33,6 +36,7 @@ const increaseCounter = () => {
     return(
         <div className="quizComponentDiv">     
     {questions.length ? ( <>
+            {counter < 10 ? ( <>
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <button className="true">TRUE</button>
@@ -40,6 +44,7 @@ const increaseCounter = () => {
             <p className="progress">{counter}/10</p>
             <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
         </div>
+        </>) : <button className="seeResultsButton">See My Results</button>}
     </>)
     : null }
         </div>
