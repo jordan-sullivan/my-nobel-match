@@ -1,6 +1,6 @@
-import './Results.css';
 import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
+import './Results.css';
 
 const Results = () => {
     const [laureateData, setLaureateData] = useState([])
@@ -8,7 +8,7 @@ const Results = () => {
     useEffect(()=> {
         fetchLaureates()
         .then(data => {
-        console.log("data", data.laureates)
+        console.log("LaureatesData", data.laureates)
         setLaureateData(data.laureates)
       })
     }, [])
@@ -23,7 +23,7 @@ const Results = () => {
             <div className="studentDetails">
                 <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
                 <p className="correctCategories">It looks like we have found the next Nobel laureate in CATEGORY in You!</p>
-                <p>one of 6 icons here </p>
+                <p>ICON</p>
                 <button classNAme="retakeButton">Re-take quiz</button>
             </div>
         </div>
