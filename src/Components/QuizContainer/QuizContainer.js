@@ -1,6 +1,7 @@
 import React from "react"
 import Quiz from "../Quiz/Quiz"
 import './QuizContainer.css';
+import PropTypes from "prop-types";
 
 
 const QuizContainer = ({questionData}) => {
@@ -25,6 +26,10 @@ return(
         <Quiz questions={questions}/>
     </div>
     )
+}
+
+QuizContainer.propTypes = {
+questionData: PropTypes.array
 }
 
 export default QuizContainer

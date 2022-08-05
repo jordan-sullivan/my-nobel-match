@@ -1,6 +1,7 @@
 import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
 import './Results.css';
+import PropTypes from "prop-types";
 
 const Results = () => {
     const [laureateData, setLaureateData] = useState([])
@@ -30,5 +31,8 @@ const Results = () => {
     )
 }
 
+Results.propTypes = {
+    laureateData: PropTypes.array
+}
 
 export default Results

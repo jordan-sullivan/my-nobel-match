@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import './Quiz.css';
 import Results from "../Results/Results"
+import PropTypes from "prop-types";
 
 
 const Quiz = ({ questions }) => {
@@ -72,5 +73,9 @@ const Quiz = ({ questions }) => {
         : null }
         </div>
 )}
+
+Quiz.propTypes = {
+    questions: PropTypes.array
+}
 
 export default Quiz
