@@ -1,6 +1,7 @@
 import './Quiz.css';
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom"
 
 
 const Quiz = ({ questions, handleQuizResults}) => {
@@ -69,11 +70,12 @@ const Quiz = ({ questions, handleQuizResults}) => {
                 <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
             </div>
             <p className="progress">{counter}/10</p>
+            <Link to={`/results`}>
             <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
+            </Link>
         </div>}
         </>)
         : null }
-       
         </div>
 )}
 
