@@ -4,7 +4,7 @@ import './QuizContainer.css';
 import PropTypes from "prop-types";
 
 
-const QuizContainer = ({questionData}) => {
+const QuizContainer = ({questionData, handleQuizResults}) => {
 
     const questions = questionData.reduce((reducedQs, q) => {
         if ((q.category.includes("Animals") ||  q.category.includes("Books") || 
@@ -17,7 +17,7 @@ const QuizContainer = ({questionData}) => {
 
 return(
     <div className="containerComponentDiv">
-        <Quiz questions={questions}/>
+        <Quiz questions={questions} handleQuizResults={handleQuizResults}/>
     </div>
     )
 }

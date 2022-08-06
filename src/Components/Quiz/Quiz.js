@@ -3,7 +3,7 @@ import './Quiz.css';
 import PropTypes from "prop-types";
 
 
-const Quiz = ({ questions }) => {
+const Quiz = ({ questions, handleQuizResults }) => {
     const [counter, setCounter] = useState(1)
     const [results, setResults] = useState([])
     const [topField, setTopField] = useState("")
@@ -43,15 +43,10 @@ const Quiz = ({ questions }) => {
        const sortedSortable = sortable.sort((a, b) => {
           return  b[1] - a[1]
         })
-        return sortedSortable[0][0]
-        //need to pass this ^ to the Results component
+        handleQuizResults(sortedSortable[0][0])
     }
     
-    useEffect(() => {
-        console.log("TOP", topField)
-        setTopField(sortedSortable[0][0])
-        setTopField(calculateQuizResults)
-    })
+   
     
     return(
         <div className="quizComponentDiv">     
