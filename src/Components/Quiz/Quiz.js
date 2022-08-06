@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import './Quiz.css';
-import Results from "../Results/Results"
 import PropTypes from "prop-types";
 
 
@@ -44,13 +43,14 @@ const Quiz = ({ questions }) => {
        const sortedSortable = sortable.sort((a, b) => {
           return  b[1] - a[1]
         })
-        console.log("SORTED", sortedSortable[0][0])
         return sortedSortable[0][0]
+        //need to pass this ^ to the Results component
     }
-        
+    
     useEffect(() => {
         console.log("TOP", topField)
-        setTopField(results[0])
+        setTopField(sortedSortable[0][0])
+        setTopField(calculateQuizResults)
     })
     
     return(
@@ -76,6 +76,7 @@ const Quiz = ({ questions }) => {
         </div>}
         </>)
         : null }
+       
         </div>
 )}
 

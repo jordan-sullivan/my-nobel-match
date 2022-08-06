@@ -2,6 +2,7 @@ import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
 import './Results.css';
 import PropTypes from "prop-types";
+import React from "react";
 
 const Results = () => {
     const [laureateData, setLaureateData] = useState([])
@@ -14,25 +15,28 @@ const Results = () => {
       })
     }, [])
 
-    return(
-        <div className="resultsComponentDiv">
+     laureateData.map((laureate) => {
+        return(
+         <div className="resultsComponentDiv">
+           {console.log(laureate.nobelPrizes[0].categoryFullName.en)}
             <div className="matchDetails">
-                <h3 className="matchName">based on your results, you match with <span>Michael A. Spence</span></h3>
-                <p className="matchCategory">Recipient of the YEAR Science and Nature Prize. </p>
-                <p className="matchQuote">"for his work on fghdgghg kfh dfjghjdfgdhjfg jhsg dhjg  ghjkhjgd f jghd."</p>
+                <h3 className="matchName">Based on your results, you match with <span>{laureate.knownName.en}</span></h3>
+                <p className="matchCategory">who earned {laureate.nobelPrizes[0].categoryFullName.en} in {laureate.nobelPrizes[0].awardYear} </p>
+                <p className="matchQuote">{laureate.nobelPrizes[0].motivation.en}</p>
             </div>
             <div className="studentDetails">
                 <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
-                <p className="correctCategories">It looks like we have found the next Nobel laureate in CATEGORY in You!</p>
+                <p className="correctCategories">It looks like we have found the next Nobel laureate in {laureate.nobelPrizes[0].category.en} in You!</p>
                 <p>ICON</p>
                 <button classNAme="retakeButton">Re-take quiz</button>
             </div>
         </div>
-    )
+        )
+    })
 }
 
-Results.propTypes = {
-    laureateData: PropTypes.array
-}
+// Results.propTypes = {
+//     laureateData: PropTypes.array
+// }
 
 export default Results

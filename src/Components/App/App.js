@@ -2,6 +2,7 @@
 import '../App/App';
 import Results from "../Results/Results"
 import QuizContainer from "../QuizContainer/QuizContainer"
+// import ResultsContainer from "../ResultsContainer/ResultsContainer"
 import { fetchQuestions } from "../../apiCalls"
 import {useState, useEffect} from "react"
 
@@ -22,6 +23,7 @@ const App = () => {
         {/* <Home /> */}
         {/* <img src={medal} className="App-logo" alt="logo" /> */}
         <Results/>
+    
       </div>
     );
 
