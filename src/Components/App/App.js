@@ -7,7 +7,7 @@ import {useState, useEffect} from "react"
 
 const App = () => {
   const [questionData, setQuestionData] = useState([])
-  const [topField, setTopField] = useState("General Knowledge")
+  const [topField, setTopField] = useState("")
 
   useEffect(() => {
     fetchQuestions()
@@ -23,6 +23,7 @@ const App = () => {
  
   return (
     <div className="App">
+      
        {!topField && <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults} />}
         {/* <Home /> */}
         {/* <img src={medal} className="App-logo" alt="logo" /> */}

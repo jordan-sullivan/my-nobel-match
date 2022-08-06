@@ -53,8 +53,10 @@ const Quiz = ({ questions, handleQuizResults}) => {
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <p className="questionCategory">{questions[counter].category}</p>
-            <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
-            <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            <div className="buttonDiv">
+                <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
+                <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            </div>
             <p className="progress">{counter}/10</p>
             <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
         </div>
@@ -62,8 +64,10 @@ const Quiz = ({ questions, handleQuizResults}) => {
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <p className="questionCategory">{questions[counter].category}</p>
-            <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
-            <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            <div className="buttonDiv">
+                <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
+                <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            </div>
             <p className="progress">{counter}/10</p>
             <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
         </div>}
