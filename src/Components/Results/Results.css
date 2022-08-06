@@ -1,24 +1,41 @@
 .resultsComponentDiv{
-    border:2px solid teal;
+    height:100vh;
+    width: 100vw;
     display:flex;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
-    color:black;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #CEA252;
+    background-color: #371717;
 }
-.matchDetails{
+.matchDetails, .studentDetails{
     border:2px solid black;
+    background-color: #612C2B;
+    height: 80%;
+    width: 40%;
+    padding: 2%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.matchName, .matchCategory, .matchQuote{
-    border: 2px solid pink;
+.matchName{
+    font-size: 3.5em;
+    text-align: center;
 }
 
-.studentDetails{
-    border: 2px solid black;
+.matchCategory, .matchQuote, .correctCategories{
+    font-size: 2em;
+    text-align:center;
 }
-.correctCategories{
-    border: 2px solid pink;
-}
+
 .retakeButton{
-color:red;
+    color: black;
+    font-size: 1em;
+    height: 10%;
+    width: 20%;
+}
+.retakeButton:hover {
+    cursor: pointer;
 }

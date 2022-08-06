@@ -27,7 +27,6 @@ const App = () => {
         {/* <Home /> */}
         {/* <img src={medal} className="App-logo" alt="logo" /> */}
         {topField && <Results topField={topField} />}
-    
       </div>
     );
 

@@ -45,7 +45,7 @@ const Results = ({topField}) => {
         {matchedLaureate && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
-                <h3 className="matchName">Based on your results, you match with <span>{matchedLaureate.knownName.en}</span></h3>
+                <h3 className="matchName">Based on your results, you match with <br/><span>{matchedLaureate.knownName.en}</span></h3>
                 <p className="matchCategory">who earned {matchedLaureate.nobelPrizes[0].categoryFullName.en} in {matchedLaureate.nobelPrizes[0].awardYear} </p>
                 <p className="matchQuote">{matchedLaureate.nobelPrizes[0].motivation.en}</p>
             </div>
@@ -53,7 +53,7 @@ const Results = ({topField}) => {
                 <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
                 <p className="correctCategories">It looks like we have found the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en} in You!</p>
                 <p>ICON</p>
-                <button classNAme="retakeButton">Re-take quiz</button>
+                <button className="retakeButton">Re-take quiz</button>
             </div>
             </div>
         } 
