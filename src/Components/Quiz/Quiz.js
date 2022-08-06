@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react"
 import './Quiz.css';
-import Results from "../Results/Results"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 
 
-const Quiz = ({ questions }) => {
+const Quiz = ({ questions, handleQuizResults}) => {
     const [counter, setCounter] = useState(1)
     const [results, setResults] = useState([])
     const [topField, setTopField] = useState("")
@@ -44,14 +43,8 @@ const Quiz = ({ questions }) => {
        const sortedSortable = sortable.sort((a, b) => {
           return  b[1] - a[1]
         })
-        console.log("SORTED", sortedSortable[0][0])
-        return sortedSortable[0][0]
+        handleQuizResults(sortedSortable[0][0])
     }
-        
-    useEffect(() => {
-        console.log("TOP", topField)
-        setTopField(results[0])
-    })
     
     return(
         <div className="quizComponentDiv">     
@@ -76,6 +69,7 @@ const Quiz = ({ questions }) => {
         </div>}
         </>)
         : null }
+       
         </div>
 )}
 

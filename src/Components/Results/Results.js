@@ -1,10 +1,12 @@
+import './Results.css';
 import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
-import './Results.css';
 import PropTypes from "prop-types";
+import React from "react";
 
-const Results = () => {
+const Results = ({topField}) => {
     const [laureateData, setLaureateData] = useState([])
+    const [matchedLaureate, setMatchedLaureate] = useState(null)
 
     useEffect(()=> {
         fetchLaureates()
@@ -13,26 +15,53 @@ const Results = () => {
         setLaureateData(data.laureates)
       })
     }, [])
+    
+    const determineMatch = () => { 
+        let matches =[]
+            if (topField === "General Knowledge") {
+                console.log("26")
+                matches = laureateData.filter(person => person.nobelPrizes[0].category.en === "Medicine" || person.nobelPrizes[0].category.en === "Chemistry")
+                } else if (topField === "Science & Math" || "Science: Computers") {
+                matches = laureateData.filter(person => person.nobelPrizes[0].category.en === "Economic Sciences" || person.nobelPrizes[0].category.en === "Physics")
+                } else if (topField === "Entertainment: Books") {
+                    matches = laureateData.filter(person => person.nobelPrizes[0].category.en === "Literature")
+                } else {
+                matches = laureateData.filter(person => person.nobelPrizes[0].category === "Peace" )
+            }
+           let shuffledMatches = matches
+            .map(matches => ({ matches, randNum: Math.random() }))
+            .sort((a, b) => a.randNum - b.randNum)
+            .map(({ matches }) => matches)
+            setMatchedLaureate(shuffledMatches[0])
+    }
+        // if(laureateData.length >1 && !matchedLaureate){
+        //     console.log("LOOP?")
+        //     determineMatch()
+        // }
 
-    return(
-        <div className="resultsComponentDiv">
+        return( 
+        <>
+        <button onClick={() => determineMatch()}>Hello worldd</button>
+        {matchedLaureate && 
+            <div className="resultsComponentDiv">
             <div className="matchDetails">
-                <h3 className="matchName">based on your results, you match with <span>Michael A. Spence</span></h3>
-                <p className="matchCategory">Recipient of the YEAR Science and Nature Prize. </p>
-                <p className="matchQuote">"for his work on fghdgghg kfh dfjghjdfgdhjfg jhsg dhjg  ghjkhjgd f jghd."</p>
+                <h3 className="matchName">Based on your results, you match with <br/><span>{matchedLaureate.knownName.en}</span></h3>
+                <p className="matchCategory">who earned {matchedLaureate.nobelPrizes[0].categoryFullName.en} in {matchedLaureate.nobelPrizes[0].awardYear} </p>
+                <p className="matchQuote">{matchedLaureate.nobelPrizes[0].motivation.en}</p>
             </div>
             <div className="studentDetails">
                 <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
-                <p className="correctCategories">It looks like we have found the next Nobel laureate in CATEGORY in You!</p>
+                <p className="correctCategories">It looks like we have found the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en} in You!</p>
                 <p>ICON</p>
-                <button classNAme="retakeButton">Re-take quiz</button>
+                <button className="retakeButton">Re-take quiz</button>
             </div>
-        </div>
-    )
+            </div>
+        } 
+        </>)  
 }
 
 Results.propTypes = {
-    laureateData: PropTypes.array
+    topField: PropTypes.string
 }
-
+    
 export default Results
