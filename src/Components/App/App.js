@@ -2,11 +2,8 @@
 import '../App/App';
 import Results from "../Results/Results"
 import QuizContainer from "../QuizContainer/QuizContainer"
-// import ResultsContainer from "../ResultsContainer/ResultsContainer"
 import { fetchQuestions } from "../../apiCalls"
 import {useState, useEffect} from "react"
-import { renderHook } from '@testing-library/react';
-
 
 const App = () => {
   const [questionData, setQuestionData] = useState([])

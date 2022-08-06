@@ -1,6 +1,6 @@
+import './QuizContainer.css';
 import React from "react"
 import Quiz from "../Quiz/Quiz"
-import './QuizContainer.css';
 import PropTypes from "prop-types";
 
 

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
 import './Quiz.css';
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 
 
@@ -45,8 +45,6 @@ const Quiz = ({ questions, handleQuizResults}) => {
         })
         handleQuizResults(sortedSortable[0][0])
     }
-    
-   
     
     return(
         <div className="quizComponentDiv">     
