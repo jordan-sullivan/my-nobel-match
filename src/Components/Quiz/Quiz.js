@@ -3,7 +3,7 @@ import './Quiz.css';
 import PropTypes from "prop-types";
 
 
-const Quiz = ({ questions, handleQuizResults }) => {
+const Quiz = ({ questions, handleQuizResults}) => {
     const [counter, setCounter] = useState(1)
     const [results, setResults] = useState([])
     const [topField, setTopField] = useState("")

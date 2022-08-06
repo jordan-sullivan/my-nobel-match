@@ -10,9 +10,7 @@ import { renderHook } from '@testing-library/react';
 
 const App = () => {
   const [questionData, setQuestionData] = useState([])
-  const [topField, setTopField] = useState("")
-
-  //make method to update hook, pass down to Quiz to function[[0[0]]]
+  const [topField, setTopField] = useState("General Knowledge")
 
   useEffect(() => {
     fetchQuestions()
@@ -28,10 +26,10 @@ const App = () => {
  
   return (
     <div className="App">
-       <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults}/>
+       {!topField && <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults} />}
         {/* <Home /> */}
         {/* <img src={medal} className="App-logo" alt="logo" /> */}
-        <Results topField={topField} />
+        {topField && <Results topField={topField} />}
     
       </div>
     );
