@@ -13,7 +13,6 @@ const Results = ({topField}) => {
     useEffect(()=> {
         fetchLaureates()
         .then(data => {
-        console.log("LaureatesData", data.laureates)
         setLaureateData(data.laureates)
       })
     }, [])
