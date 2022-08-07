@@ -19,7 +19,6 @@ describe("Home & Quiz spec", () => {
     cy.get(".go").click().url("http://localhost:3000/quiz")
   })
 
-  
   it("should be able to see one question, the question category, 2 buttons, and a progress counter only", () => {
     cy.visit("http://localhost:3000/quiz")
     cy.get(".question").should("exist");
@@ -60,17 +59,17 @@ describe("Home & Quiz spec", () => {
     cy.url("http://localhost:3000/results")
   });
       
-      it("should return an error message if a network request fails to fetch quiz data", () => {
-        cy.visit("http://localhost:3000/");
-        cy.intercept(
-          "GET",
-          "https://opentdb.com/api.php?amount=50&difficulty=easy&type=boolean",
-          {
-            statusCode: 500,
-            body: {
-              error: " 500 Server Error",
-            },
-          }
-          )
-      });
+  it("should return an error message if a network request fails to fetch quiz data", () => {
+    cy.visit("http://localhost:3000/");
+    cy.intercept(
+      "GET",
+      "https://opentdb.com/api.php?amount=50&difficulty=easy&type=boolean",
+      {
+        statusCode: 500,
+        body: {
+          error: " 500 Server Error",
+        },
+        }
+        )
+  });
 });
