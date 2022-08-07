@@ -2,16 +2,19 @@ import './Quiz.css';
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom"
+import arrow from "../../images/arrow.png"
 
 
 const Quiz = ({ questions, handleQuizResults}) => {
     const [counter, setCounter] = useState(1)
     const [results, setResults] = useState([])
     const [topField, setTopField] = useState("")
+    const [isClicked, setIsClicked] = useState(false)
     
     
     const checkTrueCorrect = (event) => {
         event.preventDefault()
+        setIsClicked(true)
         if(questions[counter].correct_answer === "True"){
             setResults(results => [...results, questions[counter].category])
         } 
@@ -19,6 +22,7 @@ const Quiz = ({ questions, handleQuizResults}) => {
 
     const checkFalseCorrect = (event) => {
         event.preventDefault()
+        setIsClicked(true)
         if(questions[counter].correct_answer === "False") {
             setResults(results => [...results, questions[counter].category])
         } 
@@ -26,9 +30,13 @@ const Quiz = ({ questions, handleQuizResults}) => {
 
     const increaseCounter = () => {
         setCounter(counter +1)
+        setIsClicked(false)
     }
 
     const calculateQuizResults = () => {
+        if(!results){
+            setResults([...results, "Peace"])
+        }
        const hashmap = results.reduce((obj, category) => {
             if(!obj[category]){
                 obj[category] = 1
@@ -54,13 +62,15 @@ const Quiz = ({ questions, handleQuizResults}) => {
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <p className="questionCategory">{questions[counter].category}</p>
-            <div className="buttonDiv">
+           <div className="buttonDiv">
                 <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
                 <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
             </div>
             <div className="bottomDiv">
                 <p className="progress">{counter}/10</p>
-                <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
+                {isClicked &&
+                <img onClick={increaseCounter} className="nextQuestionButton" src={arrow} alt="arrow pointing right to indicate next page"/>
+                }
             </div>
         </div>
         </>) :
@@ -73,9 +83,10 @@ const Quiz = ({ questions, handleQuizResults}) => {
             </div>
             <div className="bottomDiv">
                 <p className="progress">{counter}/10</p>
+                {isClicked && 
                 <Link to={`/results`}>
-                <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
-                </Link>
+                <img onClick={calculateQuizResults} className="seeResultsButton" src={arrow} alt="arrow pointing right to indicate next page"/>
+                </Link>}
             </div>
         </div>}
         </>)

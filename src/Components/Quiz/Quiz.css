@@ -1,3 +1,23 @@
+*{
+    text-decoration: none;
+}
+
+.seeResultsDiv{
+    height:100vh;
+    width:100vw;
+    background-color: #612C2B;
+    display:flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeResults{
+    height: 40%;
+    width:40%;
+    color:#CEA252
+}
+
 .quizComponentDiv {
     background-color: #371717;
     height: 100vh;
@@ -70,17 +90,15 @@
 }
 
 .nextQuestionButton{
-    background-color: #CEA252;
-    font-size: 1em;
-    font:black;
-    height: 55%;
-    width: 25%;
+    height: 80%;
+    width: 10%;
+}
+.nextQuestionButton, .seeResultsButton:hover {
+   transform: scale(1.1);
 }
 
 .seeResultsButton{
-    background-color: #CEA252;
-    font-size: 1em;
-    font: black;
-    height: 60%;
-    width: 90%;
+   margin-left: 75%;;
+    height: 40%;
+    width: 20%;
 }

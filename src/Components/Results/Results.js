@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 const Results = ({topField}) => {
     const [laureateData, setLaureateData] = useState([])
     const [matchedLaureate, setMatchedLaureate] = useState(null)
+    const [isDetermined, setIsDetermined] = useState(false)
 
     useEffect(()=> {
         fetchLaureates()
@@ -34,31 +35,33 @@ const Results = ({topField}) => {
             .sort((a, b) => a.randNum - b.randNum)
             .map(({ matches }) => matches)
             setMatchedLaureate(shuffledMatches[0])
+            setIsDetermined(true)
     }
-        // if(laureateData.length >1 && !matchedLaureate){
-        //     console.log("LOOP?")
-        //     determineMatch()
-        // }
 
         return( 
             <Link to="/results">
         <>
-        <button onClick={() => determineMatch()}>Button GO AWAYYYYYY</button>
-        {matchedLaureate && 
+        {!isDetermined && 
+        <div className="determinedDiv">
+            <button className="seeResults" onClick={() => determineMatch()} >see my results!</button>
+        </div>}
+        {matchedLaureate && isDetermined && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
                 <h3 className="matchName">Based on your results, you match with <br/><span>{matchedLaureate.knownName.en}</span></h3>
                 <p className="matchCategory">who earned {matchedLaureate.nobelPrizes[0].categoryFullName.en} in {matchedLaureate.nobelPrizes[0].awardYear} </p>
-                <p className="matchQuote">{matchedLaureate.nobelPrizes[0].motivation.en}</p>
+                <p className="matchQuote">"{matchedLaureate.nobelPrizes[0].motivation.en}"</p>
             </div>
             <div className="studentDetails">
-                <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
-                <p className="correctCategories">It looks like we have found the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en} in You!</p>
-                <p>ICON</p>
-                <button className="retakeButton">Re-take quiz</button>
+                <p className="correctCategories">You answered the most questions correct in the {topField} category.</p>
+                <p className="correctCategories">You might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
+                <p>Check out more information on {matchedLaureate.knownName.en} HERE</p>
+                <Link to="/quiz">
+                    <button className="retakeButton">Re-take quiz</button>
+                </Link>
             </div>
             </div>
-        } 
+        }
         </>
         </Link>)
 }
