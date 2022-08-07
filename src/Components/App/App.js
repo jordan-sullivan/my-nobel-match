@@ -1,13 +1,15 @@
-// import medal from '../../images/medal.jpeg';
+
 import '../App/App';
+import Home from '../Home/Home';
 import Results from "../Results/Results"
 import QuizContainer from "../QuizContainer/QuizContainer"
+import { Route } from "react-router-dom";
 import { fetchQuestions } from "../../apiCalls"
 import {useState, useEffect} from "react"
 
 const App = () => {
   const [questionData, setQuestionData] = useState([])
-  const [topField, setTopField] = useState("General Knowledge")
+  const [topField, setTopField] = useState("")
 
   useEffect(() => {
     fetchQuestions()
@@ -19,14 +21,18 @@ const App = () => {
  const handleQuizResults = (result) => {
   setTopField(result)
  }
- console.log("TOP", topField);
  
   return (
     <div className="App">
-       {!topField && <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults} />}
-        {/* <Home /> */}
-        {/* <img src={medal} className="App-logo" alt="logo" /> */}
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      <Route exact path="/quiz">
+        <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults} />
+      </Route>
+      <Route exact path ="/results">
         {topField && <Results topField={topField} />}
+      </Route>
       </div>
     );
 

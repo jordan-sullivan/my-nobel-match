@@ -1,0 +1,42 @@
+.homeDiv{
+    height:100vh;
+    width:100vw;
+    background-image: url(../../images/medal.jpeg);
+    background-size: contain;
+    background:contain;
+}
+
+.homeText{
+height:90%;
+color: #cea252;
+display:flex;
+flex-direction: column;
+align-items:flex-end;
+justify-content: end;
+padding-right: 5%;
+text-align: end;
+
+}
+
+.title {
+    font-size: 6em;
+}
+
+.subTitle {
+    font-size: 3em;
+    margin-bottom: 15%;
+}
+
+.go{
+    height:10vh;
+    width:10vw;
+    background-color:#CEA252;
+    font-size:1.5em;
+}
+
+.go:hover{
+    cursor:pointer;
+    font-size:2em;
+    font-weight: bolder;
+    
+}

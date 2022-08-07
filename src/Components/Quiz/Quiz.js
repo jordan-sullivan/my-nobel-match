@@ -1,6 +1,7 @@
 import './Quiz.css';
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom"
 
 
 const Quiz = ({ questions, handleQuizResults}) => {
@@ -53,23 +54,32 @@ const Quiz = ({ questions, handleQuizResults}) => {
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <p className="questionCategory">{questions[counter].category}</p>
-            <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
-            <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
-            <p className="progress">{counter}/10</p>
-            <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
+            <div className="buttonDiv">
+                <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
+                <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            </div>
+            <div className="bottomDiv">
+                <p className="progress">{counter}/10</p>
+                <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
+            </div>
         </div>
         </>) :
         <div className="questionDiv">
             <h2 className="question">{questions[counter].question}</h2>
             <p className="questionCategory">{questions[counter].category}</p>
-            <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
-            <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
-            <p className="progress">{counter}/10</p>
-            <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
+            <div className="buttonDiv">
+                <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
+                <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
+            </div>
+            <div className="bottomDiv">
+                <p className="progress">{counter}/10</p>
+                <Link to={`/results`}>
+                <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
+                </Link>
+            </div>
         </div>}
         </>)
         : null }
-       
         </div>
 )}
 

@@ -3,6 +3,7 @@ import { fetchLaureates } from "../../apiCalls"
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom"
 
 const Results = ({topField}) => {
     const [laureateData, setLaureateData] = useState([])
@@ -40,8 +41,9 @@ const Results = ({topField}) => {
         // }
 
         return( 
+            <Link to="/results">
         <>
-        <button onClick={() => determineMatch()}>Hello worldd</button>
+        <button onClick={() => determineMatch()}>Button GO AWAYYYYYY</button>
         {matchedLaureate && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
@@ -57,7 +59,8 @@ const Results = ({topField}) => {
             </div>
             </div>
         } 
-        </>)  
+        </>
+        </Link>)
 }
 
 Results.propTypes = {
