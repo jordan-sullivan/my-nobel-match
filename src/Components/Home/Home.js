@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import './Home.css';
+import arrow from "../../images/arrow.png"
 
 const Home = () => {
 

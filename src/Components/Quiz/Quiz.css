@@ -70,17 +70,15 @@
 }
 
 .nextQuestionButton{
-    background-color: #CEA252;
-    font-size: 1em;
-    font:black;
-    height: 55%;
-    width: 25%;
+    height: 80%;
+    width: 10%;
+}
+.nextQuestionButton, .seeResultsButton:hover {
+   transform: scale(1.1);
 }
 
 .seeResultsButton{
-    background-color: #CEA252;
-    font-size: 1em;
-    font: black;
-    height: 60%;
-    width: 90%;
+   margin-left: 75%;;
+    height: 40%;
+    width: 20%;
 }

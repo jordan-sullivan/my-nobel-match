@@ -2,6 +2,7 @@ import './Quiz.css';
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom"
+import arrow from "../../images/arrow.png"
 
 
 const Quiz = ({ questions, handleQuizResults}) => {
@@ -65,7 +66,8 @@ const Quiz = ({ questions, handleQuizResults}) => {
             <div className="bottomDiv">
                 <p className="progress">{counter}/10</p>
                 {isClicked &&
-                <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>}
+                <img onClick={increaseCounter} className="nextQuestionButton" src={arrow} alt="arrow pointing right to indicate next page"/>
+                }
             </div>
         </div>
         </>) :
@@ -80,7 +82,7 @@ const Quiz = ({ questions, handleQuizResults}) => {
                 <p className="progress">{counter}/10</p>
                 {isClicked && 
                 <Link to={`/results`}>
-                <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
+                <img onClick={calculateQuizResults} className="seeResultsButton" src={arrow} alt="arrow pointing right to indicate next page"/>
                 </Link>}
             </div>
         </div>}
