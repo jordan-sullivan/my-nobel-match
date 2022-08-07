@@ -33,3 +33,10 @@ text-align: end;
     background-color:#CEA252;
     font-size:1.5em;
 }
+
+.go:hover{
+    cursor:pointer;
+    font-size:2em;
+    font-weight: bolder;
+    
+}

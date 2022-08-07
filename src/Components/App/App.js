@@ -21,7 +21,6 @@ const App = () => {
  const handleQuizResults = (result) => {
   setTopField(result)
  }
- console.log("TOP", topField);
  
   return (
     <div className="App">

@@ -58,8 +58,10 @@ const Quiz = ({ questions, handleQuizResults}) => {
                 <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
                 <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
             </div>
-            <p className="progress">{counter}/10</p>
-            <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
+            <div className="bottomDiv">
+                <p className="progress">{counter}/10</p>
+                <button className="nextQuestionButton" onClick={increaseCounter}>Next Question</button>
+            </div>
         </div>
         </>) :
         <div className="questionDiv">
@@ -69,10 +71,12 @@ const Quiz = ({ questions, handleQuizResults}) => {
                 <button className="true" onClick={(event) => checkTrueCorrect(event)}>TRUE</button>
                 <button className="false" onClick={(event) => checkFalseCorrect(event)}>FALSE</button>
             </div>
-            <p className="progress">{counter}/10</p>
-            <Link to={`/results`}>
-            <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
-            </Link>
+            <div className="bottomDiv">
+                <p className="progress">{counter}/10</p>
+                <Link to={`/results`}>
+                <button className="seeResultsButton" onClick={calculateQuizResults}>See My Results</button>
+                </Link>
+            </div>
         </div>}
         </>)
         : null }

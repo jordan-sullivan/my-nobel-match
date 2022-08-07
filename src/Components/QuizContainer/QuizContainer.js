@@ -9,7 +9,7 @@ const QuizContainer = ({questionData, handleQuizResults}) => {
     const questions = questionData.reduce((reducedQs, q) => {
         if ((q.category.includes("Animals") ||  q.category.includes("Books") || 
             q.category.includes("Science") || q.category.includes("General") || q.category.includes("Geography")) && 
-            (!q.question.includes("&quot") && !q.question.includes("#"))) {
+            (!q.question.includes("&quot") && !q.question.includes("#") && !q.question.includes("slug"))) {
             reducedQs.push(q)
         }
     return reducedQs

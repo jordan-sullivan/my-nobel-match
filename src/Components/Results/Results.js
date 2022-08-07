@@ -41,9 +41,9 @@ const Results = ({topField}) => {
         // }
 
         return( 
-            <Link to="/external">
+            <Link to="/results">
         <>
-        <button onClick={() => determineMatch()}>Hello worldd</button>
+        <button onClick={() => determineMatch()}>Button GO AWAYYYYYY</button>
         {matchedLaureate && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
