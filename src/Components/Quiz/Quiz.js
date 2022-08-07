@@ -34,6 +34,9 @@ const Quiz = ({ questions, handleQuizResults}) => {
     }
 
     const calculateQuizResults = () => {
+        if(!results){
+            setResults([...results, "Peace"])
+        }
        const hashmap = results.reduce((obj, category) => {
             if(!obj[category]){
                 obj[category] = 1

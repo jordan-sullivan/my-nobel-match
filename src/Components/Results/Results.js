@@ -35,15 +35,13 @@ const Results = ({topField}) => {
             .map(({ matches }) => matches)
             setMatchedLaureate(shuffledMatches[0])
     }
-        // if(laureateData.length >1 && !matchedLaureate){
-        //     console.log("LOOP?")
-        //     determineMatch()
-        // }
 
         return( 
             <Link to="/results">
         <>
-        <button onClick={() => determineMatch()}>Button GO AWAYYYYYY</button>
+        <div className="seeResultsDiv">
+            <button className="seeResults" onClick={() => determineMatch()}>see my results!</button>
+        </div>
         {matchedLaureate && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
@@ -52,8 +50,8 @@ const Results = ({topField}) => {
                 <p className="matchQuote">{matchedLaureate.nobelPrizes[0].motivation.en}</p>
             </div>
             <div className="studentDetails">
-                <p className="correctCategories">You answered correct questions in the following categories: "Geography" , "Science and Nature"</p>
-                <p className="correctCategories">It looks like we have found the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en} in You!</p>
+                <p className="correctCategories">You answered the most questions correct in:{topField}</p>
+                <p className="correctCategories">It looks like you might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
                 <p>ICON</p>
                 <button className="retakeButton">Re-take quiz</button>
             </div>
