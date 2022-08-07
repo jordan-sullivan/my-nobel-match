@@ -42,18 +42,20 @@ const Results = ({topField}) => {
             <Link to="/results">
         <>
         {!isDetermined && 
-        <button className="seeResults" onClick={() => determineMatch()} >see my results!</button>}
+        <div className="determinedDiv">
+            <button className="seeResults" onClick={() => determineMatch()} >see my results!</button>
+        </div>}
         {matchedLaureate && isDetermined && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
                 <h3 className="matchName">Based on your results, you match with <br/><span>{matchedLaureate.knownName.en}</span></h3>
                 <p className="matchCategory">who earned {matchedLaureate.nobelPrizes[0].categoryFullName.en} in {matchedLaureate.nobelPrizes[0].awardYear} </p>
-                <p className="matchQuote">{matchedLaureate.nobelPrizes[0].motivation.en}</p>
+                <p className="matchQuote">"{matchedLaureate.nobelPrizes[0].motivation.en}"</p>
             </div>
             <div className="studentDetails">
-                <p className="correctCategories">You answered the most questions correct in:{topField}</p>
-                <p className="correctCategories">It looks like you might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
-                <p>ICON</p>
+                <p className="correctCategories">You answered the most questions correct in the {topField} category.</p>
+                <p className="correctCategories">You might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
+                <p>Check out more information on {matchedLaureate.knownName.en} HERE</p>
                 <Link to="/quiz">
                     <button className="retakeButton">Re-take quiz</button>
                 </Link>

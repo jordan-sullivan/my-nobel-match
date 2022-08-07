@@ -30,9 +30,6 @@ const App = () => {
       <Route exact path="/quiz">
         <QuizContainer questionData={questionData} handleQuizResults={handleQuizResults} />
       </Route>
-      <Route exact path ="/generating-results">
-        <Results topField={topField} />
-      </Route>
       <Route exact path ="/results">
         {topField && <Results topField={topField} />}
       </Route>
