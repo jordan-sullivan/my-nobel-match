@@ -28,12 +28,12 @@ My Nobel Match is a React application that uses React Router built in 6 days at 
 ### Home Page and The Quiz
 A user is welcomed to the home page and encouraged to begin quiz. The user selects true or false and then navigates to the next page. 
 
-![My Nobel Match home-page gif](https://media.giphy.com/media/jX6LN52LF89CturCJS/giphy.gif)
+![My Nobel Match home-page gif](https://media.giphy.com/media/sdpO3S03oodG0NvJdJ/giphy.gif)
 
 ### Display Results and link to external page
 After the quiz is complete, a user views their results and has the option to learn more about their match.
 
-![My Nobel Match results gif and external link](https://media.giphy.com/media/t6xkInpM0C1jphhcvT/giphy.gif)
+![My Nobel Match results gif and external link](https://media.giphy.com/media/j8etOO8sKh8KSqJKF3/giphy.gif)
 
 **[Back to top](#table-of-contents)**
 
