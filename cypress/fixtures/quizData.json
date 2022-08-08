@@ -1,0 +1,122 @@
+{"results": [
+{
+  "category": "Geography",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "Alaska is the largest state in the United States.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "Science: Computers",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "RAM stands for Random Access Memory.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "General Knowledge",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "The Sun rises from the North.",
+  "correct_answer": "False",
+  "incorrect_answers": [
+    "True"
+  ]
+},
+{
+  "category": "Geography",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "Alaska is the largest state in the United States.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "Science: Computers",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "RAM stands for Random Access Memory.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "General Knowledge",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "The Sun rises from the North.",
+  "correct_answer": "False",
+  "incorrect_answers": [
+    "True"
+  ]
+},
+{
+  "category": "Geography",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "Alaska is the largest state in the United States.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "Science: Computers",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "RAM stands for Random Access Memory.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "General Knowledge",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "The Sun rises from the North.",
+  "correct_answer": "False",
+  "incorrect_answers": [
+    "True"
+  ]
+},
+{
+  "category": "Geography",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "Alaska is the largest state in the United States.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "Science: Computers",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "RAM stands for Random Access Memory.",
+  "correct_answer": "True",
+  "incorrect_answers": [
+    "False"
+  ]
+},
+{
+  "category": "General Knowledge",
+  "type": "boolean",
+  "difficulty": "easy",
+  "question": "The Sun rises from the North.",
+  "correct_answer": "False",
+  "incorrect_answers": [
+    "True"
+  ]
+}
+]}

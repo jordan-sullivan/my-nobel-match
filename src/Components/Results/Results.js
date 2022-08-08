@@ -13,7 +13,6 @@ const Results = ({topField}) => {
     useEffect(()=> {
         fetchLaureates()
         .then(data => {
-        console.log("LaureatesData", data.laureates)
         setLaureateData(data.laureates)
       })
     }, [])
@@ -55,7 +54,7 @@ const Results = ({topField}) => {
             <div className="studentDetails">
                 <p className="correctCategories">You answered the most questions correct in the {topField} category.</p>
                 <p className="correctCategories">You might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
-                <p>Check out more information on {matchedLaureate.knownName.en} HERE</p>
+                <p>Check out more information on {matchedLaureate.knownName.en} : <a href={matchedLaureate.links[1].href} target="_blank"><span className="here">HERE</span></a></p>
                 <Link to="/quiz">
                     <button className="retakeButton">Re-take quiz</button>
                 </Link>
