@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# My Nobel Match
+### A quiz to see which Nobel laureate you are most similar to! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this solo project, the goal was to create a React application that allows 9th grade students the capability to take a short 10 question quiz to see which Nobel Laureate they are most similar to. The aim is to help students connect to these incredible minds through a simple quiz. After users get through the quiz, they are navigated to their results page and are able to see the fields and categories which link them. Users can click learn more about their match by clicking a link to an external site. Check it out the project [deployed on Heroku here](https://my-nobel-match.herokuapp.com/) !
 
-## Available Scripts
+### Table of Contents
+- [Project Specs](#project-specs)
+- [Illustrations](#illustrations)
+- [Setup](#setup)
+- [Project Management](#project-management)
+- [Future Features](#future-features)
+- [Contributor](#contributors)
+- [Technologies](#technologies)
 
-In the project directory, you can run:
 
-### `npm start`
+## Project Specs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My Nobel Match is a React application that uses React Router built in 6 days at the [Turing School of Software and Design](https://turing.edu/). The goal of this solo [project](https://frontend.turing.edu/projects/module-3/showcase.html) was to solidify and demonstrate the understanding of:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React fundamentals
+- Test React components & asynchronous JS using Cypress
+- Create multi page UX using React Router
+- PropTypes
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Illustrations
 
-### `npm run build`
+### Home Page and The Quiz
+A user is welcomed to the home page and encouraged to begin quiz. The user selects true or false and then navigates to the next page. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![My Nobel Match home-page gif](https://media.giphy.com/media/jX6LN52LF89CturCJS/giphy.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Display Results and link to external page
+After the quiz is complete, a user views their results and has the option to learn more about their match.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![My Nobel Match results gif and external link](https://media.giphy.com/media/t6xkInpM0C1jphhcvT/giphy.gif)
 
-### `npm run eject`
+**[Back to top](#table-of-contents)**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- In your terminal, clone the repo
+- `https://github.com/jordan-sullivan/my-nobel-match.git`
+- Make a new directory and cd into it
+- Install NPM packages
+- `npm install`
+- Do NOT run `npm audit fix --force`
+- Then type `npm start` . This runs the app in the development mode.
+- Open http://localhost:3000 to view it in your browser.
+- The browser should then deploy using a local host
+- Enjoy using My Nobel Match!
+- NOTE: Make sure that you type Control + C in your terminal when you are done using the application. This ensure the server will stop running before your close your Terminal.
+- Start the server to see the local site `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Management
 
-## Learn More
+- I used a [Github Project Board](https://github.com/users/jordan-sullivan/projects/11) to stay on task and meet the deadline as well as had check-ins with my mentor. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Inform the user if their answer was right or wrong in real time as they hit the submit button
+- Allow a user to search through laureates in a drop-down list to learn more about them 
+- Responsive design to allow for better UX/UI on tablets / mobile devices
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributor
 
-### Analyzing the Bundle Size
+- [Jordan Sullivan](https://github.com/jordan-sullivan)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React
+- React Router
+- Cypress
+- ES6 Javascript
+- CSS
+- Semantic HTML
+- Fetch API
+- Hooks
+- Prop Types
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**[Back to top](#table-of-contents)**

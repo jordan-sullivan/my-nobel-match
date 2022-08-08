@@ -1,23 +1,28 @@
 .determinedDiv{
-height:100vh;
-width:100vw;
-background-color:#CEA252;
-display: flex;
-justify-content: center;
-align-items: center;
-align-content: center;
+    height:100vh;
+    width:100vw;
+    background-color:#CEA252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: url(../../images/nobel_categories.jpeg);
+    background-size:cover;
+    background:cover;
 }
 .seeResults{
-    height: 40%;
-    width: 60%;
+    height: 15%;
+    width: 25%;
     background-color: #612C2B;
-    font-size: 4em;
+    font-size: 2em;
+    margin-top:7%;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
 .seeResults:hover{
-cursor: pointer;
-font-size:5em;
-background-color:#371717;
+    cursor: pointer;
+    font-size:2.5em;
+    background-color:#371717;
 }
 
 .resultsComponentDiv{
@@ -62,12 +67,22 @@ background-color:#371717;
 
 .retakeButton{
     margin-top:55%;
+    background-color: #CEA252;
+    border-radius: 4%;
     color: black;
     font-size: 1em;
+    font-weight: bolder;
     height: 70%;
     width: 90%;
 }
 .retakeButton:hover {
     cursor: pointer;
     transform: scale(1.1)
+}
+
+.external-link{
+    font-size: 1em;
+    text-decoration: underline;
+    color: white;
+    font-weight: bolder;
 }

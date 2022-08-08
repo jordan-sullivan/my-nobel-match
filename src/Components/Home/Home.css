@@ -7,15 +7,14 @@
 }
 
 .homeText{
-height:90%;
-color: #cea252;
-display:flex;
-flex-direction: column;
-align-items:flex-end;
-justify-content: end;
-padding-right: 5%;
-text-align: end;
-
+    height:90%;
+    color: #cea252;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: end;
+    padding-right: 5%;
+    text-align: end;
 }
 
 .title {
@@ -38,5 +37,4 @@ text-align: end;
     cursor:pointer;
     font-size:2em;
     font-weight: bolder;
-    
 }
