@@ -1,7 +1,7 @@
 import './QuizContainer.css';
 import React from "react"
 import Quiz from "../Quiz/Quiz"
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 
 
 const QuizContainer = ({questionData, handleQuizResults}) => {
@@ -23,7 +23,8 @@ return(
 }
 
 QuizContainer.propTypes = {
-questionData: PropTypes.array
+questionData: PropTypes.array,
+handleQuizResults: PropTypes.string
 }
 
 export default QuizContainer

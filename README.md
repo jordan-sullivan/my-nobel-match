@@ -1,7 +1,7 @@
 # My Nobel Match
 ### A quiz to see which Nobel laureate you are most similar to! 
 
-For this solo project, the goal was to create a React application that allows 9th grade students the capability to take a short 10 question quiz to see which Nobel Laureate they are most similar to. The aim is to help students connect to these incredible minds through a simple quiz. After users get through the quiz, they are navigated to their results page and are able to see the fields and categories which link them. Users can click learn more about their match by clicking a link to an external site. Check it out the project [deployed on Heroku here](https://rancid-tomatillos-movie-viewer.herokuapp.com/) !
+For this solo project, the goal was to create a React application that allows 9th grade students the capability to take a short 10 question quiz to see which Nobel Laureate they are most similar to. The aim is to help students connect to these incredible minds through a simple quiz. After users get through the quiz, they are navigated to their results page and are able to see the fields and categories which link them. Users can click learn more about their match by clicking a link to an external site. Check it out the project [deployed on Heroku here](https://my-nobel-match.herokuapp.com/) !
 
 ### Table of Contents
 - [Project Specs](#project-specs)

@@ -20,7 +20,6 @@ const Results = ({topField}) => {
     const determineMatch = () => { 
         let matches =[]
             if (topField === "General Knowledge") {
-                console.log("26")
                 matches = laureateData.filter(person => person.nobelPrizes[0].category.en === "Medicine" || person.nobelPrizes[0].category.en === "Chemistry")
                 } else if (topField === "Science & Math" || "Science: Computers") {
                 matches = laureateData.filter(person => person.nobelPrizes[0].category.en === "Economic Sciences" || person.nobelPrizes[0].category.en === "Physics")
@@ -38,12 +37,13 @@ const Results = ({topField}) => {
     }
 
         return( 
+            <>
             <Link to="/results">
-        <>
         {!isDetermined && 
         <div className="determinedDiv">
             <button className="seeResults" onClick={() => determineMatch()} >see my results!</button>
         </div>}
+        </Link>
         {matchedLaureate && isDetermined && 
             <div className="resultsComponentDiv">
             <div className="matchDetails">
@@ -53,16 +53,15 @@ const Results = ({topField}) => {
             </div>
             <div className="studentDetails">
                 <p className="correctCategories">You answered the most questions correct in the {topField} category.</p>
-                <p className="correctCategories">You might be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
-                <p>Check out more information on {matchedLaureate.knownName.en} : <a href={matchedLaureate.links[1].href} target="_blank"><span className="here">HERE</span></a></p>
+                <p className="correctCategories">You could be the next Nobel laureate in {matchedLaureate.nobelPrizes[0].category.en}!</p>
+                <p>Check out more information on {matchedLaureate.knownName.en} <a target="_blank" href={matchedLaureate.links[1].href} className="external-link">  HERE </a></p>
                 <Link to="/quiz">
                     <button className="retakeButton">Re-take quiz</button>
                 </Link>
             </div>
             </div>
         }
-        </>
-        </Link>)
+        </>)
 }
 
 Results.propTypes = {

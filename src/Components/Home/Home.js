@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom"
 import './Home.css';
-import arrow from "../../images/arrow.png"
 
 const Home = () => {
 
     return(
-
         <div className="homeDiv">
             <div className="homeText">
                 <h1 className="title">My Nobel Match</h1>

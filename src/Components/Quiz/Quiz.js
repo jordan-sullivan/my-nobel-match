@@ -95,7 +95,8 @@ const Quiz = ({ questions, handleQuizResults}) => {
 )}
 
 Quiz.propTypes = {
-    questions: PropTypes.array
+    questions: PropTypes.array,
+    handleQuizResults: PropTypes.string
 }
 
 export default Quiz
